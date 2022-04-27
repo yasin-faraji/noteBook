@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'yasin';
+    src: url('../fonts/Vazir-Medium.eot');
+    src: url('../fonts/Vazir-Medium.woff') format('woff'),
+         url('../fonts/Vazir-Medium.woff2') format('woff2')
+}
+
+*{
+    font-family: 'yasin',Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+html,body{
+    font-family: 'yasin',Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(240, 239, 239);
+
+}
+
+#parent-items{
+    background: rgb(223, 223, 223);
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    min-height: 100vh;
+}
+
+.addBtn{
+    position: fixed;
+    background: rgb(250, 121, 35);
+    padding: 2.5rem;
+    border-radius: 50%;
+    text-align: center;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: black;
+    z-index: 2;
+}
+.addBtn:hover{
+    background: gold;
+    color: black;
+}
+
+
+/* hiden form */
+#hidenForm{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    padding: 0.5rem 1rem;
+    background: rgb(200, 235, 103);
+    border-radius: 2rem;
+    z-index: 2;
+
+}
+
+#hidenForm textarea{
+    background: inherit;
+    border: none;
+    border-bottom: solid 1px;
+    outline: none;
+}
+
+#hidenForm input[type=text]{
+    width: 100%;
+    padding: 1rem 0;
+    background: inherit;
+    border: none;
+    border-bottom: solid 1px;
+    outline: none;
+}
+
+
+#hiden-save-btn{
+    padding: 0.5rem 3rem;
+    border: none;
+    background: rgb(78, 142, 238);
+    border-radius: 1rem;
+    cursor: pointer;
+    
+}
+
+
+.cancle{
+    color: red;
+    align-self: flex-start;
+}
+
+/* hiden form */
+
+#items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+}
+
+
+
+
+.item{
+    background-color: rgb(103, 185, 218);
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.4rem;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.item-title{
+    border-bottom: solid 1px black;
+    font-size: 2rem;
+    font-weight: bold;
+
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+
+.content{
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+}
+
+.cancel-btn{
+
+    align-self: center;
+
+    color: red;
+    background: wheat;
+    padding: 0.1rem 1rem;
+    border-radius: 1rem;
+}
+
+.see-note{
+
+    background: black;
+    color: gold;
+    border-radius: 0.5rem;
+    opacity: 80%;
+}
+
+
+#const-item{
+    color: #333;
+    cursor: pointer;
+}
+
+#const-item i{
+    font-size: 4rem;
+    text-align: center;
+}
+
+#see-note{
+    background:rgb(191, 182, 182);
+    height: 70vh;
+    width: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    overflow: scroll;
+    display: none;
+    color: #333;
+    border: solid rgb(56, 55, 55) 2px;
+}
+
+#cancel-in-see-note{
+    color: red;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#text-in-see-note{
+
+    padding: 1rem;
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+/* grid items in deferent size*/
+@media(max-width:978px){
+    #items{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(max-width:768px){
+    #items{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+    #items{
+        grid-template-columns: 1fr;
+    }
+
+    .addBtn{
+        padding: 2rem;
+        font-size: 1rem;
+
+    }
+    /* .addBtn{
+        position:static;
+        display: block;
+        border-radius: 15%;
+        width: 100%;
+        margin-bottom: 1rem;
+
+    } */
+}
+

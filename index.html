@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notebook</title>
+    <link rel="icon" type="image/x-icon" href="./assets/image/book.svg" />
+    <!-- <i class="fa fa-book" aria-hidden="true"></i> -->
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+</head>
+<body>
+
+    <form action="" id="hidenForm">
+        <a href="#" class="cancle">X</a>
+        <input type="text"  placeholder="Title" id="hiden-title">
+        <textarea cols="30" rows="5" placeholder="enter your note"  id="note-content" ></textarea>
+        <button id="hiden-save-btn">save</button>
+    </form>
+
+    <div class="container" id="parent-items">
+
+            <a href="#" class="addBtn">+</a>
+
+
+
+
+            <section id="items">
+
+                <!-- const item -->
+                <div class="item" id="const-item">
+
+                    <div>
+                        <i class="bi bi-clipboard-plus-fill"></i>
+                        <p>add new note</p>
+                    </div>
+
+                </div>
+                <!-- const item -->
+            </section>
+
+    </div>
+
+    <div id="see-note">
+        <div id="cancel-in-see-note">X</div>
+        <div id="text-in-see-note"></div>
+    </div>
+</body>
+<script src="./assets/js/app.js"></script>
+</html>
+
+
